@@ -114,27 +114,6 @@ react-vite-todo-app/
    - Mọi thay đổi được lưu tự động vào localStorage
    - Dữ liệu sẽ được khôi phục khi mở lại ứng dụng
 
-## 🤝 Đóng Góp
-
-Mọi đóng góp đều được chào đón! Để đóng góp:
-
-1. Fork repository
-2. Tạo feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to branch (`git push origin feature/AmazingFeature`)
-5. Mở Pull Request
-
-## 📋 Roadmap
-
-- [ ] Thêm tính năng xóa todo
-- [ ] Thêm tính năng chỉnh sửa todo
-- [ ] Thêm filter (All, Active, Completed)
-- [ ] Thêm drag & drop để sắp xếp thứ tự
-- [ ] Thêm due date cho todos
-- [ ] Thêm categories/tags
-- [ ] Dark mode toggle
-- [ ] Export/Import dữ liệu
-
 ## 📄 Bản Quyền
 
 Dự án này được phân phối dưới giấy phép **MIT License**. Xem file [LICENSE](LICENSE) để biết thêm chi tiết.
@@ -169,8 +148,8 @@ SOFTWARE.
 
 **React Todo App Team**
 - Website: [Đang cập nhật]
-- Email: [Đang cập nhật]
-- GitHub: [@YOUR_USERNAME](https://github.com/YOUR_USERNAME)
+- Email: anhkietdang23@gmail.com
+- GitHub: [DG-Kit](https://github.com/DG-Kit)
 
 ---
 
