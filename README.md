@@ -1,69 +1,177 @@
-# React + TypeScript + Vite
+# 📝 React Todo App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Một ứng dụng quản lý công việc (Todo App) hiện đại được xây dựng với React, TypeScript và Material-UI. Ứng dụng cho phép người dùng tạo, quản lý và theo dõi các công việc cần làm với giao diện đẹp mắt và trải nghiệm người dùng mượt mà.
 
-Currently, two official plugins are available:
+![React](https://img.shields.io/badge/React-19.1.0-blue.svg)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.8.3-blue.svg)
+![Vite](https://img.shields.io/badge/Vite-7.0.4-green.svg)
+![Material-UI](https://img.shields.io/badge/Material--UI-7.3.2-blue.svg)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Tính Năng
 
-## Expanding the ESLint configuration
+- ➕ **Thêm công việc mới** - Tạo todo mới với interface đơn giản
+- ✅ **Đánh dấu hoàn thành** - Click checkbox để toggle trạng thái completed/pending
+- 💾 **Lưu trữ tự động** - Dữ liệu được lưu vào localStorage, không mất khi reload trang
+- 🎨 **Giao diện đẹp** - Sử dụng Material-UI components với thiết kế hiện đại
+- 📱 **Responsive Design** - Tối ưu cho mọi kích thước màn hình
+- ⚡ **Performance cao** - Được xây dựng với Vite để đảm bảo tốc độ tải nhanh
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Demo
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+![Todo App Preview](https://via.placeholder.com/800x600?text=Todo+App+Preview)
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 🛠️ Công Nghệ Sử Dụng
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Frontend Framework
+- **React 19.1.0** - Thư viện JavaScript để xây dựng giao diện người dùng
+- **TypeScript 5.8.3** - JavaScript với type safety
+- **Vite 7.0.4** - Build tool và dev server siêu nhanh
+
+### UI & Styling
+- **Material-UI (MUI) 7.3.2** - React component library
+- **@mui/icons-material** - Material Design icons
+- **@emotion/react & @emotion/styled** - CSS-in-JS styling
+- **@fontsource/roboto** - Roboto font family
+
+### State Management & Utils
+- **React Hooks** - useState, useEffect cho state management
+- **UUID 11.1.0** - Tạo unique identifiers cho todos
+- **LocalStorage API** - Persistent data storage
+
+### Development Tools
+- **ESLint** - Code linting và formatting
+- **TypeScript ESLint** - TypeScript-specific linting rules
+
+## 📦 Cài Đặt
+
+### Prerequisites
+- Node.js >= 18
+- npm hoặc yarn
+
+### Hướng dẫn cài đặt
+
+1. **Clone repository**
+```bash
+git clone https://github.com/YOUR_USERNAME/react-vite-todo-app.git
+cd react-vite-todo-app
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. **Cài đặt dependencies**
+```bash
+npm install
 ```
+
+3. **Chạy ứng dụng ở chế độ development**
+```bash
+npm run dev
+```
+
+4. **Mở trình duyệt và truy cập**
+```
+http://localhost:5173
+```
+
+## 🏗️ Scripts
+
+```bash
+npm run dev      # Chạy development server
+npm run build    # Build cho production
+npm run preview  # Preview production build
+npm run lint     # Chạy ESLint
+```
+
+## 📁 Cấu Trúc Project
+
+```
+react-vite-todo-app/
+├── public/                 # Static assets
+├── src/
+│   ├── components/         # React components
+│   │   ├── CreateNewTodo.tsx   # Form thêm todo mới
+│   │   ├── Todo.tsx           # Component todo item
+│   │   └── TodoList.tsx       # Danh sách todos
+│   ├── App.tsx            # Main App component
+│   ├── main.tsx           # Entry point
+│   ├── index.css          # Global styles
+│   └── vite-env.d.ts      # Vite type declarations
+├── package.json           # Dependencies và scripts
+├── tsconfig.json          # TypeScript configuration
+├── vite.config.ts         # Vite configuration
+└── .gitignore            # Git ignore rules
+```
+
+## 🔧 Cách Sử Dụng
+
+1. **Thêm Todo Mới**
+   - Nhập nội dung công việc vào ô input
+   - Click nút "Thêm" để tạo todo mới
+
+2. **Đánh Dấu Hoàn Thành**
+   - Click vào icon checkbox bên phải mỗi todo
+   - Todo sẽ chuyển đổi giữa trạng thái pending (⬜) và completed (✅)
+
+3. **Lưu Trữ Tự Động**
+   - Mọi thay đổi được lưu tự động vào localStorage
+   - Dữ liệu sẽ được khôi phục khi mở lại ứng dụng
+
+## 🤝 Đóng Góp
+
+Mọi đóng góp đều được chào đón! Để đóng góp:
+
+1. Fork repository
+2. Tạo feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to branch (`git push origin feature/AmazingFeature`)
+5. Mở Pull Request
+
+## 📋 Roadmap
+
+- [ ] Thêm tính năng xóa todo
+- [ ] Thêm tính năng chỉnh sửa todo
+- [ ] Thêm filter (All, Active, Completed)
+- [ ] Thêm drag & drop để sắp xếp thứ tự
+- [ ] Thêm due date cho todos
+- [ ] Thêm categories/tags
+- [ ] Dark mode toggle
+- [ ] Export/Import dữ liệu
+
+## 📄 Bản Quyền
+
+Dự án này được phân phối dưới giấy phép **MIT License**. Xem file [LICENSE](LICENSE) để biết thêm chi tiết.
+
+```
+MIT License
+
+Copyright (c) 2025 React Todo App
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+---
+
+## 👨‍💻 Tác Giả
+
+**React Todo App Team**
+- Website: [Đang cập nhật]
+- Email: [Đang cập nhật]
+- GitHub: [@YOUR_USERNAME](https://github.com/YOUR_USERNAME)
+
+---
+
+⭐ **Nếu bạn thấy project hữu ích, hãy cho một star để ủng hộ chúng tôi!** ⭐
