@@ -31,8 +31,11 @@ export const Todo = ({
     <Button 
     style={{ justifyContent: "space-between" }} 
     fullWidth={true} 
-    endIcon={<Icon isDone={isDone} 
-    updateTodo={updateTodo} id={id} />}>
+    endIcon={
+      <Icon isDone={isDone} 
+      updateTodo={updateTodo} 
+      id={id} />
+    }>
       {name}
     </Button>
   )
